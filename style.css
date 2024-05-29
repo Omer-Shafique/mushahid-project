@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images\\WhatsApp Image 2024-05-29 at 12.18.25 AM.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+header, main, footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: To add a semi-transparent background to content */
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for header */
+}
+
+header .logo img {
+    max-width: 100px;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.intro-content img {
+    max-width: 200px;
+}
+
+.intro-content h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.intro-content p {
+    font-size: 1.2em;
+}
+
+.login-signup {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-signup button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-signup button:hover {
+    background-color: #0056b3;
+}
+
+.form-section {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-section input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-section button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer .social-media a img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    color: #fff;
+    margin: 10px 0 0;
+}
+
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}

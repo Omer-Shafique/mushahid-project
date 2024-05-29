@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HZ Builder and Construction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="HZ Logo">
+        </div>
+        <h1>WELCOME :</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-company.html">Our Company</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="employee-details.html">Employee Details</a></li> 
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-content">
+                <img src="images/logo.png" alt="Builder and Construction Logo">
+                <h2>BUILDER AND CONSTRUCTION</h2>
+                <p>Payroll Made Easy, So You Can Spend More Time On What Matters</p>
+            </div>
+            <div class="login-signup">
+                <h3>LOGIN & SIGN UP:</h3>
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn">Sign Up</button>
+            </div>
+        </section>
+
+        <section class="form-section" id="loginSection" style="display: none;">
+            <h3>Login</h3>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section class="form-section" id="signupSection" style="display: none;">
+            <h3>Sign Up</h3>
+            <form id="signupForm">
+                <input type="text" id="signupUsername" placeholder="Username" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="#"><img src="images/pngegg.png" alt="Facebook"></a>
+            <a href="#"><img src="images/pngegg (3).png" alt="WhatsApp"></a>
+            <a href="#"><img src="images/pngegg (1).png" alt="LinkedIn"></a>
+            <a href="#"><img src="images/—Pngtree—twitter social media round icon_8704823.png" alt="Twitter"></a>
+        </div>
+        <p>Copyright 2024. All Rights Reserved by HZ</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            document.getElementById('loginSection').style.display = 'block';
+            document.getElementById('signupSection').style.display = 'none';
+        });
+    
+        document.getElementById('signupBtn').addEventListener('click', function() {
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('signupSection').style.display = 'block';
+        });
+    
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('signupUsername').value;
+            const password = document.getElementById('signupPassword').value;
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            alert('Signup successful! Please login with your credentials.');
+            document.getElementById('signupSection').style.display = 'none';
+            document.getElementById('loginSection').style.display = 'block';
+        });
+    
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+    
+            if (username === storedUsername && password === storedPassword) {
+                alert('Login successful! Redirecting to dashboard...');
+                window.location.href = 'dashboard.html'; // Make sure this file exists.
+            } else {
+                alert('Incorrect username or password.');
+            }
+        });
+    </script>
+    
+</body>
+</html>
